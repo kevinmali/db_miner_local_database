@@ -26,29 +26,18 @@ class details_page extends StatelessWidget {
             List<allcategory> data =
                 maydata.map((e) => allcategory.frommap(data: e)).toList();
             return ListView.builder(
-                itemCount: data.length,
-                itemBuilder: (context, i) => (data[i].quotes[i]['category'] ==
-                        data1)
-                    ? Container(
-                        height: 200,
-                        width: double.infinity,
-                        margin: EdgeInsets.all(8),
-                        child: ListView.builder(
-                            itemCount: data[i].quotes.length,
-                            itemBuilder: (ctx, index) {
-                              return Container(
-                                child: Column(
-                                  children: [
-                                    Text("${data[i].quotes[index]['quote']}"),
-                                    SizedBox(
-                                      height: 30,
-                                    )
-                                  ],
-                                ),
-                              );
-                            }),
-                      )
-                    : Container());
+              itemCount: data.length,
+              itemBuilder: (context, i) => (data[i].category == data1)
+                  ? Container(
+                      height: 120,
+                      width: double.infinity,
+                      margin: EdgeInsets.all(8),
+                      child: Column(
+                        children: [Text("${data[i].quote}")],
+                      ),
+                    )
+                  : Container(),
+            );
           } else if (snapshot.hasError) {
             return Text("${snapshot.error}");
           }

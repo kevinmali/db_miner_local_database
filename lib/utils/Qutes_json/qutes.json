@@ -1,10 +1,5 @@
 [
-  {
-    "category-id": 1,
-    "quotes-category": "Good morning",
-    "category-icon": "lib/Asset/Images/1.png",
-    "category-image": "assets/images/category_images/1.png",
-    "quotes": [
+
       {
         "id": 1,
         "category": "Good morning",
@@ -88,15 +83,8 @@
         "quote": "The morning is a reminder that you have been given another chance. Make the most of it and live fully.",
         "author": "Unknown",
         "favorite": 0
-      }
-    ]
-  },
-  {
-    "category-id": 2,
-    "quotes-category": "Attitude",
-    "category-icon": "lib/Asset/Images/2.png",
-    "category-image": "assets/images/category_images/2.png",
-    "quotes": [
+      },
+
       {
         "id": 1,
         "category": "Attitude",
@@ -180,15 +168,8 @@
         "quote": "Your attitude is like a price tag, it shows how valuable you are.",
         "author": "Unknown",
         "favorite": 0
-      }
-    ]
-  },
-  {
-    "category-id": 3,
-    "quotes-category": "Relationship",
-    "category-icon": "lib/Asset/Images/3.png",
-    "category-image": "assets/images/category_images/3.png",
-    "quotes": [
+      },
+
       {
         "id": 1,
         "category": "Relationship",
@@ -272,15 +253,8 @@
         "quote": "A strong relationship is choosing to love each other even in those moments when you struggle to like each other.",
         "author": "Unknown",
         "favorite": 0
-      }
-    ]
-  },
-  {
-    "category-id": 4,
-    "quotes-category": "Happiness",
-    "category-icon": "lib/Asset/Images/4.png",
-    "category-image": "assets/images/category_images/4.png",
-    "quotes": [
+      },
+
       {
         "id": 1,
         "category": "Happiness",
@@ -364,15 +338,8 @@
         "quote": "Happiness is not a goal; it's a by-product of a life well-lived.",
         "author": "Eleanor Roosevelt",
         "favorite": 0
-      }
-    ]
-  },
-  {
-    "category-id": 5,
-    "quotes-category": "Motivation",
-    "category-icon": "lib/Asset/Images/5.png",
-    "category-image": "assets/images/category_images/5.png",
-    "quotes": [
+      },
+
       {
         "id": 1,
         "category": "Motivation",
@@ -456,15 +423,8 @@
         "quote": "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.",
         "author": "Albert Schweitzer",
         "favorite": 0
-      }
-    ]
-  },
-  {
-    "category-id": 6,
-    "quotes-category": "Love",
-    "category-icon": "lib/Asset/Images/6.png",
-    "category-image": "assets/images/category_images/6.png",
-    "quotes": [
+      },
+
       {
         "id": 1,
         "category": "Love",
@@ -548,15 +508,8 @@
         "quote": "Love is the only force capable of transforming an enemy into a friend.",
         "author": "Martin Luther King Jr.",
         "favorite": 0
-      }
-    ]
-  },
-  {
-    "category-id": 7,
-    "quotes-category": "Good night",
-    "category-icon": "lib/Asset/Images/7.png",
-    "category-image": "assets/images/category_images/7.png",
-    "quotes": [
+      },
+
       {
         "id": 1,
         "category": "Good night",
@@ -640,15 +593,8 @@
         "quote": "Good night. May your dreams be filled with love and happiness.",
         "author": "Unknown",
         "favorite": 0
-      }
-    ]
-  },
-  {
-    "category-id": 8,
-    "quotes-category": "New year",
-    "category-icon": "lib/Asset/Images/8.png",
-    "category-image": "assets/images/category_images/8.png",
-    "quotes": [
+      },
+
       {
         "id": 1,
         "category": "New year",
@@ -732,16 +678,8 @@
         "quote": "The old year has gone. Let the dead past bury its own dead. The new year has taken possession of the clock of time. All hail the duties and possibilities of the coming twelve months!",
         "author": "Edward Payson Powell",
         "favorite": 0
-      }
-    ],
-    "favorite": 0
-  },
-  {
-    "category-id": 9,
-    "quotes-category": "God",
-    "category-icon": "lib/Asset/Images/9.png",
-    "category-image": "assets/images/category_images/9.png",
-    "quotes": [
+      },
+
       {
         "id": 1,
         "category": "God",
@@ -825,15 +763,8 @@
         "quote": "God is the ruler of all nations.",
         "author": "Psalm 22:28",
         "favorite": 0
-      }
-    ]
-  },
-  {
-    "category-id": 10,
-    "quotes-category": "Friendship",
-    "category-icon": "lib/Asset/Images/10.png",
-    "category-image": "assets/images/category_images/10.png",
-    "quotes": [
+      },
+
       {
         "id": 1,
         "category": "Friendship",
@@ -917,15 +848,8 @@
         "quote": "Friendship is the only cement that will ever hold the world together.",
         "author": "Woodrow Wilson",
         "favorite": 0
-      }
-    ]
-  },
-  {
-    "category-id": 11,
-    "quotes-category": "Husband",
-    "category-icon": "lib/Asset/Images/11.png",
-    "category-image": "assets/images/category_images/11.png",
-    "quotes": [
+      },
+
       {
         "id": 1,
         "category": "Husband",
@@ -1009,15 +933,8 @@
         "quote": "A good husband is never the first to go to sleep or the last to awake in the morning.",
         "author": "Honoré de Balzac",
         "favorite": 0
-      }
-    ]
-  },
-  {
-    "category-id": 12,
-    "quotes-category": "Birthday",
-    "category-icon": "lib/Asset/Images/12.png",
-    "category-image": "assets/images/category_images/12.png",
-    "quotes": [
+      },
+
       {
         "id": 1,
         "category": "Birthday",
@@ -1101,15 +1018,8 @@
         "quote": "Do not regret growing older. It is a privilege denied to many.",
         "author": "Unknown",
         "favorite": 0
-      }
-    ]
-  },
-  {
-    "category-id": 13,
-    "quotes-category": "Wife",
-    "category-icon": "lib/Asset/Images/13.png",
-    "category-image": "assets/images/category_images/13.png",
-    "quotes": [
+      },
+
       {
         "id": 1,
         "category": "Wife",
@@ -1193,15 +1103,8 @@
         "quote": "My wife has been my closest friend, my closest advisor. And... she's not somebody who looks to the limelight, or even is wild about me being in politics. And that's a good reality check on me.",
         "author": "Barack Obama",
         "favorite": 0
-      }
-    ]
-  },
-  {
-    "category-id": 14,
-    "quotes-category": "Sad",
-    "category-icon": "lib/Asset/Images/14.png",
-    "category-image": "assets/images/category_images/14.png",
-    "quotes": [
+      },
+
       {
         "id": 1,
         "category": "Sad",
@@ -1285,15 +1188,8 @@
         "quote": "The saddest thing about love is that not only that it cannot last forever, but that heartbreak is soon forgotten.",
         "author": "William Faulkner",
         "favorite": 0
-      }
-    ]
-  },
-  {
-    "category-id": 15,
-    "quotes-category": "Success",
-    "category-icon": "lib/Asset/Images/15.png",
-    "category-image": "assets/images/category_images/15.png",
-    "quotes": [
+      },
+
       {
         "id": 1,
         "category": "Success",
@@ -1379,5 +1275,4 @@
         "favorite": 0
       }
     ]
-  }
-]
+
