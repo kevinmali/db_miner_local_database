@@ -24,39 +24,39 @@ List quotes = [
     "category-icon": "lib/Asset/Images/6.png",
   },
   {
-    "quotes-category": "",
+    "quotes-category": "Good night",
     "category-icon": "lib/Asset/Images/7.png",
   },
   {
-    "quotes-category": "",
+    "quotes-category": "New year",
     "category-icon": "lib/Asset/Images/8.png",
   },
   {
-    "quotes-category": "",
+    "quotes-category": "God",
     "category-icon": "lib/Asset/Images/9.png",
   },
   {
-    "quotes-category": "",
+    "quotes-category": "Friendship",
     "category-icon": "lib/Asset/Images/10.png",
   },
   {
-    "quotes-category": "",
+    "quotes-category": "Husband",
     "category-icon": "lib/Asset/Images/11.png",
   },
   {
-    "quotes-category": "",
+    "quotes-category": "Birthday",
     "category-icon": "lib/Asset/Images/12.png",
   },
   {
-    "quotes-category": "",
+    "quotes-category": "Wife",
     "category-icon": "lib/Asset/Images/13.png",
   },
   {
-    "quotes-category": "",
+    "quotes-category": "Sad",
     "category-icon": "lib/Asset/Images/14.png",
   },
   {
-    "quotes-category": "",
+    "quotes-category": "Success",
     "category-icon": "lib/Asset/Images/15.png",
   },
 ];

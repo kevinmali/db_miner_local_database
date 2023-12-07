@@ -1,8 +1,6 @@
-import 'dart:typed_data';
-
 class category {
-  int? id;
-  String quote;
+  var id;
+  var quote;
 
   category({required this.quote, required this.id});
 

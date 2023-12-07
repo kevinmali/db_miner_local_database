@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:db_miner_local_database/Views/Details_page/details_page.dart';
+import 'package:db_miner_local_database/Views/Favorite_page/favorite_screen.dart';
 import 'package:db_miner_local_database/utils/List.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -22,6 +23,13 @@ class _Home_pageState extends State<Home_page> {
       appBar: AppBar(
         title: Text("All Products"),
         centerTitle: true,
+        actions: [
+          IconButton(
+              onPressed: () {
+                Get.to(favorite_page());
+              },
+              icon: Icon(Icons.handshake_rounded)),
+        ],
       ),
       body: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
