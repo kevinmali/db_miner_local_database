@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:math';
 
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:db_miner_local_database/Helper/data_base.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -19,24 +20,42 @@ class _details_pageState extends State<details_page> {
   int ind = 0;
   String quote = "";
 
+  Color color = Colors.orangeAccent;
+
   @override
   Widget build(BuildContext context) {
     String data1 = ModalRoute.of(context)!.settings.arguments as String;
     return Scaffold(
       appBar: AppBar(
-        title: Text(data1),
+        leading: IconButton(
+            onPressed: () {
+              Get.back();
+            },
+            icon: Icon(Icons.arrow_back_ios)),
+        backgroundColor: color,
+        title: AnimatedTextKit(
+          animatedTexts: [
+            WavyAnimatedText(data1),
+            WavyAnimatedText('Qutes'),
+          ],
+          repeatForever: true,
+        ),
+        centerTitle: true,
       ),
       floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            print("===================");
-            print(quote);
-            print(ind);
-            print("===================");
+        backgroundColor: color,
+        onPressed: () {
+          print("===================");
+          print(quote);
+          print(ind);
+          print("===================");
 
-            category c1 = category(quote: quote, id: ind);
-            DB_helper.db.insetcategory(data: c1);
-          },
-          child: Icon(Icons.add)),
+          category c1 = category(quote: quote, id: ind);
+          DB_helper.db.insetcategory(data: c1);
+        },
+        child: Icon(Icons.add),
+        focusColor: Colors.orangeAccent,
+      ),
       body: FutureBuilder(
         future: rootBundle.loadString("lib/utils/Qutes_json/qutes.json"),
         builder: (context, snapshot) {
@@ -64,14 +83,19 @@ class _details_pageState extends State<details_page> {
                             children: [
                               Padding(
                                 padding: const EdgeInsets.all(15.0),
-                                child: Text("${data[i].quote}"),
+                                child: Text(
+                                  "${data[i].quote}",
+                                  maxLines: 3,
+                                  style: TextStyle(fontSize: 18),
+                                ),
                               )
                             ],
                           ),
                         ),
                         decoration: BoxDecoration(
+                            color: color,
                             border: (ind == i)
-                                ? Border.all(color: Colors.black)
+                                ? Border.all(color: Colors.black, width: 3)
                                 : Border.all(color: Colors.white),
                             borderRadius: BorderRadius.circular(10)),
                       ),

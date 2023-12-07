@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:db_miner_local_database/Views/Details_page/details_page.dart';
 import 'package:db_miner_local_database/Views/Favorite_page/favorite_screen.dart';
 import 'package:db_miner_local_database/utils/List.dart';
@@ -17,11 +18,18 @@ class Home_page extends StatefulWidget {
 }
 
 class _Home_pageState extends State<Home_page> {
+  Color color = Colors.orangeAccent;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("All Products"),
+        backgroundColor: color,
+        title: AnimatedTextKit(
+          animatedTexts: [
+            WavyAnimatedText("category"),
+          ],
+        ),
         centerTitle: true,
         actions: [
           IconButton(
@@ -44,11 +52,16 @@ class _Home_pageState extends State<Home_page> {
           child: Container(
             height: 200,
             width: double.infinity,
-            margin: EdgeInsets.all(8),
+            margin: EdgeInsets.all(5),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: color,
+            ),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Padding(
-                  padding: EdgeInsets.only(top: 8.0),
+                  padding: EdgeInsets.only(top: 5.0),
                   child: Center(
                     child: Text("${i + 1}"),
                   ),
@@ -61,6 +74,10 @@ class _Home_pageState extends State<Home_page> {
                 Center(
                   child: Text(
                     "${quotes[i]['quotes-category']}",
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
                   ),
                 ),
               ],

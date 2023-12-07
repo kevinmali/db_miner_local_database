@@ -25,7 +25,7 @@ class favorite_page extends StatelessWidget {
                 itemBuilder: (context, i) {
                   return Container(
                     height: 120,
-                    width: 120,
+                    width: 220,
                     child: Column(
                       children: [
                         Text("${categotydata?[i].quote}"),
