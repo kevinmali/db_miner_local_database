@@ -18,7 +18,7 @@ class details_page extends StatefulWidget {
 
 class _details_pageState extends State<details_page> {
   int ind = 0;
-  String quote = "";
+  String quote = "${category}";
 
   Color color = Colors.orangeAccent;
 

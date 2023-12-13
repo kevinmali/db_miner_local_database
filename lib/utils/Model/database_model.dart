@@ -1,6 +1,6 @@
 class category {
   var id;
-  var quote;
+  dynamic quote;
 
   category({required this.quote, required this.id});
 

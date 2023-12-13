@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:db_miner_local_database/Views/Details_page/details_page.dart';
 import 'package:db_miner_local_database/Views/Favorite_page/favorite_screen.dart';
@@ -7,8 +5,6 @@ import 'package:db_miner_local_database/utils/List.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-
-import '../../utils/Model/json_modal.dart';
 
 class Home_page extends StatefulWidget {
   const Home_page({super.key});
