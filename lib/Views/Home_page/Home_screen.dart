@@ -1,19 +1,13 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:db_miner_local_database/Views/Details_page/details_page.dart';
-import 'package:db_miner_local_database/Views/Favorite_page/favorite_screen.dart';
 import 'package:db_miner_local_database/utils/List.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
-class Home_page extends StatefulWidget {
-  const Home_page({super.key});
+class Home_page extends StatelessWidget {
+  Home_page({super.key});
 
-  @override
-  State<Home_page> createState() => _Home_pageState();
-}
-
-class _Home_pageState extends State<Home_page> {
   Color color = Colors.orangeAccent;
 
   @override
@@ -30,7 +24,7 @@ class _Home_pageState extends State<Home_page> {
         actions: [
           IconButton(
               onPressed: () {
-                Get.to(favorite_page());
+                Get.offNamed("/Fev");
               },
               icon: Icon(Icons.handshake_rounded)),
         ],

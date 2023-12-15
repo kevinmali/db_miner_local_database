@@ -1,6 +1,8 @@
 import 'package:db_miner_local_database/Helper/data_base.dart';
 import 'package:db_miner_local_database/utils/Model/database_model.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class favorite_page extends StatelessWidget {
   const favorite_page({super.key});
@@ -9,6 +11,12 @@ class favorite_page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Get.offNamed("/Home");
+          },
+        ),
         title: Text("Favorite"),
       ),
       body: FutureBuilder(
