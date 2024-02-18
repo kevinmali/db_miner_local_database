@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
@@ -24,6 +26,7 @@ class DB_helper {
     await initdb();
     String query = "INSERT INTO category(name) VALUES(?)";
     List args = [data.quote];
+    log("${args}");
     int? res = await database?.rawInsert(query, args);
     return res!;
   }
@@ -32,7 +35,7 @@ class DB_helper {
     await initdb();
     String query = "SELECT * FROM  category";
     List<Map<String, dynamic>> data = await database!.rawQuery(query);
-
+    log("${data}");
     List<category> alldata = data.map((e) => category.sql(data: e)).toList();
     return alldata;
   }
