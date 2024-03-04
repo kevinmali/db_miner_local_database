@@ -1,26 +1,25 @@
 import 'dart:convert';
-import 'dart:math';
-
+import 'dart:developer';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:db_miner_local_database/Helper/data_base.dart';
+import 'package:db_miner_local_database/Views/Favorite_page/favorite_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import '../../utils/Model/database_model.dart';
 import '../../utils/Model/json_modal.dart';
+import '../../utils/global/varibals.dart';
 
-class details_page extends StatefulWidget {
-  details_page({super.key});
+class DetailsPage extends StatefulWidget {
+  const DetailsPage({super.key});
 
   @override
-  State<details_page> createState() => _details_pageState();
+  State<DetailsPage> createState() => _DetailsPageState();
 }
 
-class _details_pageState extends State<details_page> {
+class _DetailsPageState extends State<DetailsPage> {
   int ind = 0;
-  String quote = "${category}";
-
-  Color color = Colors.orangeAccent;
+  String quote = "$Category";
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +27,13 @@ class _details_pageState extends State<details_page> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-            onPressed: () {
-              Get.back();
-            },
-            icon: Icon(Icons.arrow_back_ios)),
-        backgroundColor: color,
+          onPressed: () {
+            Get.back();
+          },
+          icon: const Icon(Icons.arrow_back_ios),
+          color: Colors.black,
+        ),
+        backgroundColor: Colors.white,
         title: AnimatedTextKit(
           animatedTexts: [
             WavyAnimatedText(data1),
@@ -43,18 +44,28 @@ class _details_pageState extends State<details_page> {
         centerTitle: true,
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: color,
-        onPressed: () {
-          print("===================");
-          print(quote);
-          print(ind);
-          print("===================");
+        backgroundColor: Colors.white,
+        onPressed: () async {
+          // print("===================");
+          // print(quote);
+          // print(ind);
+          // print("===================");
+          Category ca = Category(quote: Global.quote, id: Global.id);
 
-          category c1 = category(quote: quote, id: ind);
-          DB_helper.db.insetcategory(data: c1);
+          int? res = await DB_helper.db.insetcategory(cat: ca);
+          log("$res");
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text("data inserted to $res"),
+            ),
+          );
+          log("===================================");
+          log(Global.quote);
+          log("===================================");
+          Get.to(const FavoritePage());
         },
-        child: Icon(Icons.add),
-        focusColor: Colors.orangeAccent,
+        focusColor: Colors.black,
+        child: const Icon(Icons.add),
       ),
       body: FutureBuilder(
         future: rootBundle.loadString("lib/utils/Qutes_json/qutes.json"),
@@ -77,7 +88,13 @@ class _details_pageState extends State<details_page> {
                       child: Container(
                         height: 120,
                         width: double.infinity,
-                        margin: EdgeInsets.all(8),
+                        margin: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                            color: Colors.primaries[ind % 18].shade400,
+                            border: (ind == i)
+                                ? Border.all(color: Colors.black, width: 3)
+                                : Border.all(color: Colors.white),
+                            borderRadius: BorderRadius.circular(10)),
                         child: Center(
                           child: Column(
                             children: [
@@ -86,18 +103,12 @@ class _details_pageState extends State<details_page> {
                                 child: Text(
                                   "${data[i].quote}",
                                   maxLines: 3,
-                                  style: TextStyle(fontSize: 18),
+                                  style: const TextStyle(fontSize: 18),
                                 ),
                               )
                             ],
                           ),
                         ),
-                        decoration: BoxDecoration(
-                            color: color,
-                            border: (ind == i)
-                                ? Border.all(color: Colors.black, width: 3)
-                                : Border.all(color: Colors.white),
-                            borderRadius: BorderRadius.circular(10)),
                       ),
                     )
                   : Container(),
@@ -105,7 +116,7 @@ class _details_pageState extends State<details_page> {
           } else if (snapshot.hasError) {
             return Text("${snapshot.error}");
           }
-          return CircularProgressIndicator();
+          return const CircularProgressIndicator();
         },
       ),
     );

@@ -1,10 +1,10 @@
-class category {
-  var id;
-  dynamic quote;
+class Category {
+  String quote;
+  dynamic id;
 
-  category({required this.quote, required this.id});
+  Category({required this.quote, required this.id});
 
-  factory category.sql({required Map data}) {
-    return category(quote: data['quote'], id: data['id']);
+  factory Category.sql({required Map data}) {
+    return Category(quote: data['quote'], id: data['id']);
   }
 }

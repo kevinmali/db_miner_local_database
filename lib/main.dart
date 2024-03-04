@@ -14,15 +14,15 @@ void main() {
       getPages: [
         GetPage(
           name: "/",
-          page: () => Welcome_Page(),
+          page: () => const WelcomePage(),
         ),
         GetPage(
           name: "/Home",
-          page: () => Home_page(),
+          page: () => HomePage(),
         ),
         GetPage(
           name: "/Fev",
-          page: () => favorite_page(),
+          page: () => const FavoritePage(),
         ),
       ],
     ),

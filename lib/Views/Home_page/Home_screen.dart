@@ -2,12 +2,11 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:db_miner_local_database/Views/Details_page/details_page.dart';
 import 'package:db_miner_local_database/utils/List.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Home_page extends StatelessWidget {
-  Home_page({super.key});
+class HomePage extends StatelessWidget {
+  HomePage({super.key});
 
   Color color = const Color(0xff01bd64);
   Color textcolor = Colors.black;
@@ -72,7 +71,8 @@ class Home_page extends StatelessWidget {
         itemCount: quotes.length,
         itemBuilder: (context, i) => GestureDetector(
           onTap: () {
-            Get.to(details_page(), arguments: quotes[i]['quotes-category']);
+            Get.to(() => const DetailsPage(),
+                arguments: quotes[i]['quotes-category']);
           },
           child: Container(
             height: 200,
